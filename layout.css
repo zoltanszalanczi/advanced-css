@@ -1,0 +1,140 @@
+/*
+
+- OVERALL DISPLAY
+
+- CONTAINER LAYOUT
+
+- SINGLE GRID ITEMS
+
+- SUB ITEMS
+
+*/
+
+
+/* --------------- OVERALL DISPLAY - GRID -----------------*/
+
+/*Definition of grid items*/
+
+.header {
+  grid-area: header;
+}
+
+.main-photo-block {
+  grid-area: main-photo-block;
+}
+
+.introduction {
+  grid-area: introduction;
+}
+
+.team-photo-block {
+  grid-area: team-photo-block;
+}
+
+.team-competencies {
+  grid-area: team-competencies;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
+/*--Container layout--*/
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main-photo-block introduction"
+    "team-photo-block team-competencies"
+    "footer footer";
+  grid-template-columns: 40vh 1fr;
+  grid-template-rows: 10% 40% 40% 10%;
+  height: 100vh;  
+  
+  background: url(assets/abstract-blue-extruded-voronoi-blocks-background-minimal-light-clean-corporate-wall-3d-geometric-surface-illustration-polygonal-elements-displacement_1217-2510.jpg) no-repeat center/cover;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;  
+    background: url(assets/abstract-blue-extruded-voronoi-blocks-background-minimal-light-clean-corporate-wall-3d-geometric-surface-illustration-polygonal-elements-displacement_1217-2510.jpg) no-repeat center/cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*----- DISPLAY OF THE SINGLE GRID ITEMS - FLEXBOX ----------*/
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-photo-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+.team-photo-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-competencies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+/*-- Sub-items--*/
+
+
+.footer-content {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
